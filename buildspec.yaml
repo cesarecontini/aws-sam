@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  # install:
+  #   commands:
+  #     - echo "Installing dependencies..."
+  #     - npm install
+
+  build:
+    commands:
+      - sam build
+      - sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
+
+#   post_build:
+#     commands:
+#       - echo "Build complete."
+
+# artifacts:
+#   files:
+#     - build/
